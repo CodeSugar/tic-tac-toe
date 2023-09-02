@@ -1,0 +1,19 @@
+<style>
+    .square{
+        display: inline-block; width: 2em; height: 2em;
+    }
+</style>
+<div>
+    {% for row in range(0,9) %}
+        {% for column in range(0,9) %}
+            {% if game.board.squares[ row*9 + column ] == 0 %}
+                <div class="square">⚪</div>
+            {% elif game.board.squares[ row*9 + column ] == 1 %}
+                <div class="square">🟢</div>
+            {% else %}
+                <div class="square">🟣</div>
+            {% endif %}
+        {% endfor %}
+        <br>
+    {% endfor %}
+</div>

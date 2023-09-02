@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package game;
+
+enum square {
+    EMPTY = 0;
+    MARK1 = 1;
+    MARK2 = 2;
+}
+
+message Board { 
+  repeated square squares = 1;
+}
